@@ -46,7 +46,7 @@ if trim(IdCupon)<>"" then
 
 	'107956  Persona
 	'107957  Empresa
-	'85296  Nº Documento  
+	'85296  NÂº Documento  
 	  
 	VolverEditar		= h2res.attribute_answer_get(IdCupon,96802,1516181,-1)
 	'VolverEditar		= "112710"
@@ -304,7 +304,7 @@ h2_dbclose() 'final
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Cupón de Garantía</title>
+<title>CupÃ³n de GarantÃ­a</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link href="css/calendario.css" rel="stylesheet" type="text/css">
     <link href="css/IT_app.css" rel="stylesheet" type="text/css">
@@ -499,7 +499,7 @@ var fec;
 	var matchArray = dateStr.match(datePat);
 
 	if (matchArray == null) {
-		alert("La fecha no tiene formato válido (" + formato + ").")
+		alert("La fecha no tiene formato vÃ¡lido (" + formato + ").")
  		objDia.value = ""
  		objMes.value = ""
  		objAgno.value = ""		
@@ -525,14 +525,14 @@ var fec;
 	}
 	
 	if (day < 1 || day > 31) {
-		 	alert("Día debe estar entre 1 y 31.");
+		 	alert("DÃ­a debe estar entre 1 y 31.");
 	 		objDia.value = ""
 	 		objDia.focus()
 			return false;
 	}
 	
 	if ((month==4 || month==6 || month==9 || month==11) && day==31) {
-				alert("Este mes no tiene 31 días!")
+				alert("Este mes no tiene 31 dÃ­as!")
 		 		objDia.value = ""
 		 		objMes.value = ""
 		 		objDia.focus()
@@ -542,7 +542,7 @@ var fec;
 	if (month == 2) {
 		var isleap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
 		if (day>29 || (day==29 && !isleap)) {
-				alert("Febrero " + year + " no tiene " + day + " días!");
+				alert("Febrero " + year + " no tiene " + day + " dÃ­as!");
 		 		objDia.value = ""
 		 		objMes.value = ""
 		 		objAgno.value = ""
@@ -916,7 +916,7 @@ function SplitFonos(){
 					
 					<%if trim(codapp)<>"4" then%>
 						if(document.formulario.txtnumfact.value==''){
-							alert("Ingrese Número de  Factura")
+							alert("Ingrese NÃºmero de  Factura")
 							document.formulario.txtnumfact.focus()
 							return false
 						}
@@ -940,7 +940,7 @@ function SplitFonos(){
 //				}
 
 				if(document.formulario.NombreEmpresa.value==''){
-					alert("Ingrese Razón Social")
+					alert("Ingrese RazÃ³n Social")
 					document.formulario.NombreEmpresa.focus()
 					return false
 				}
@@ -952,7 +952,7 @@ function SplitFonos(){
 				}
 
 				if(document.formulario.txtnroEmpresa.value==''){
-					alert("Ingrese Número")
+					alert("Ingrese NÃºmero")
 					document.formulario.txtnroEmpresa.focus()
 					return false
 				}
@@ -973,27 +973,27 @@ function SplitFonos(){
 
 
 				if(document.formulario.codTelefonoEmpresa.value==''){
-					alert("Ingrese C.Area Teléfono Principal")
+					alert("Ingrese C.Area TelÃ©fono Principal")
 					document.formulario.codTelefonoEmpresa.focus()
 					return false
 				}
 
 
 				if(document.formulario.TelefonoEmpresa.value==''){
-					alert("Ingrese Teléfono Principal")
+					alert("Ingrese TelÃ©fono Principal")
 					document.formulario.TelefonoEmpresa.focus()
 					return false
 				}
 
 
 				if(document.formulario.codTelefono2Empresa.value==''){
-					alert("Ingrese C.Area Teléfono Adicional")
+					alert("Ingrese C.Area TelÃ©fono Adicional")
 					document.formulario.codTelefono2Empresa.focus()
 					return false
 				}
 
 				if(document.formulario.TelefonoCentralEmpresa.value==''){
-					alert("Ingrese Teléfono Adicional")
+					alert("Ingrese TelÃ©fono Adicional")
 					document.formulario.TelefonoCentralEmpresa.focus()
 					return false
 				}
@@ -1006,7 +1006,7 @@ function SplitFonos(){
 
                 /*
 				if(document.formulario.FonoContactoEmpresa.value==''){
-					alert("Ingrese Teléfono Contacto")
+					alert("Ingrese TelÃ©fono Contacto")
 					document.formulario.FonoContactoEmpresa.focus()
 					return false
 				}
@@ -1130,7 +1130,7 @@ function SplitFonos(){
 
 
 				if(document.formulario.txtNro.value==''){
-					alert("Ingrese Número")
+					alert("Ingrese NÃºmero")
 					document.formulario.txtNro.focus()
 					return false
 				}						
@@ -1148,25 +1148,25 @@ function SplitFonos(){
 				}						
 
 				if(document.formulario.txtcodtel.value==''){
-					alert("Ingrese C.Area Teléfono Particular")
+					alert("Ingrese C.Area TelÃ©fono Particular")
 					document.formulario.txtcodtel.focus()
 					return false
 				}				
 				
 				if(document.formulario.Telefono.value==''){
-					alert("Ingrese Teléfono Particular")
+					alert("Ingrese TelÃ©fono Particular")
 					document.formulario.Telefono.focus()
 					return false
 				}				
 
 				if(document.formulario.txtcodtelcom.value==''){
-					alert("Ingrese C.Area Teléfono Comercial")
+					alert("Ingrese C.Area TelÃ©fono Comercial")
 					document.formulario.txtcodtelcom.focus()
 					return false
 				}				
 				
 				if(document.formulario.TelefonoCentral.value==''){
-					alert("Ingrese Teléfono Comercial")
+					alert("Ingrese TelÃ©fono Comercial")
 					document.formulario.TelefonoCentral.focus()
 					return false
 				}		
@@ -1255,7 +1255,7 @@ function SplitFonos(){
 				}						
 
 				if(document.formulario.txtNroUsuario.value==''){
-					alert("Ingrese Número Usuario")
+					alert("Ingrese NÃºmero Usuario")
 					document.formulario.txtNroUsuario.focus()
 					return false
 				}				
@@ -1267,25 +1267,25 @@ function SplitFonos(){
 				}						
 
 				if(document.formulario.txtcodtelUsuario.value==''){
-					alert("Ingrese C.Area Teléfono Particular Usuario")
+					alert("Ingrese C.Area TelÃ©fono Particular Usuario")
 					document.formulario.txtcodtelUsuario.focus()
 					return false
 				}				
 				
 				if(document.formulario.TelefonoUsuario.value==''){
-					alert("Ingrese Teléfono Particular Usuario")
+					alert("Ingrese TelÃ©fono Particular Usuario")
 					document.formulario.TelefonoUsuario.focus()
 					return false
 				}				
 
 				if(document.formulario.txtcodtelcomUsuario.value==''){
-					alert("Ingrese C.Area Teléfono Comercial Usuario")
+					alert("Ingrese C.Area TelÃ©fono Comercial Usuario")
 					document.formulario.txtcodtelcomUsuario.focus()
 					return false
 				}				
 				
 				if(document.formulario.TelefonoCentralUsuario.value==''){
-					alert("Ingrese Teléfono Comercial Usuario")
+					alert("Ingrese TelÃ©fono Comercial Usuario")
 					document.formulario.TelefonoCentralUsuario.focus()
 					return false
 				}		
@@ -1362,7 +1362,7 @@ function SplitFonos(){
 				}						
 
 				if(document.formulario.txtNroUsuarioEmp.value==''){
-					alert("Ingrese Número Usuario")
+					alert("Ingrese NÃºmero Usuario")
 					document.formulario.txtNroUsuarioEmp.focus()
 					return false
 				}						
@@ -1382,25 +1382,25 @@ function SplitFonos(){
 				}						
 
 				if(document.formulario.txtcodtelUsuarioEmp.value==''){
-					alert("Ingrese C.Area Teléfono Particular Usuario")
+					alert("Ingrese C.Area TelÃ©fono Particular Usuario")
 					document.formulario.txtcodtelUsuarioEmp.focus()
 					return false
 				}				
 				
 				if(document.formulario.TelefonoUsuarioEmp.value==''){
-					alert("Ingrese Teléfono Particular Usuario")
+					alert("Ingrese TelÃ©fono Particular Usuario")
 					document.formulario.TelefonoUsuarioEmp.focus()
 					return false
 				}				
 
 				if(document.formulario.txtcodtelcomUsuarioEmp.value==''){
-					alert("Ingrese C.Area Teléfono Comercial Usuario")
+					alert("Ingrese C.Area TelÃ©fono Comercial Usuario")
 					document.formulario.txtcodtelcomUsuarioEmp.focus()
 					return false
 				}				
 				
 				if(document.formulario.TelefonoCentralUsuarioEmp.value==''){
-					alert("Ingrese Teléfono Comercial Usuario")
+					alert("Ingrese TelÃ©fono Comercial Usuario")
 					document.formulario.TelefonoCentralUsuarioEmp.focus()
 					return false
 				}		
@@ -1468,7 +1468,7 @@ function SplitFonos(){
 				        }	
 				        if (dateDiff("d",dtFC,dtFE, 0, 0)<-2)
 				        {
-					        alert("Fecha Entrega no debe ser menor de 2 días a la actual");
+					        alert("Fecha Entrega no debe ser menor de 2 dÃ­as a la actual");
 					        return;
 				        }
 				
@@ -1512,7 +1512,7 @@ function SplitFonos(){
 				var arrayfac = ffac.split('/');
 				var fffac = new Date(arrayfac[1] + "/" + arrayfac[0] + "/" + arrayfac[2]);
 				if (dtFE < fffac){
-					alert("Fecha de Entrega de vehículo debe ser superior a la fecha de factura del Dealer")
+					alert("Fecha de Entrega de vehÃ­culo debe ser superior a la fecha de factura del Dealer")
 					return;
 				}
 
@@ -1613,21 +1613,21 @@ function SplitFonos(){
 						NumCupon = 0 
 						
 					if(NumCupon>0){
-						alert("Vehículo ya posee cupón. \n Informado por: " + local + " con fecha: " + fecha);
+						alert("VehÃ­culo ya posee cupÃ³n. \n Informado por: " + local + " con fecha: " + fecha);
 						//if (marca=="CH"){
-							alert("Para solicitar anulación haga click en la pestaña de Anulacion en Dealer Online");
+							alert("Para solicitar anulaciÃ³n haga click en la pestaÃ±a de Anulacion en Dealer Online");
 						//	}
 						//if (marca=="SS"){
-						//	alert("Para solicitar anulación haga click en la pestaña de Anulacion en Dealer Online");
+						//	alert("Para solicitar anulaciÃ³n haga click en la pestaÃ±a de Anulacion en Dealer Online");
 						//	}
 						//if (marca=="NW"){
-						//	alert("Para solicitar anulación haga click en la pestaña de Anulacion en Dealer Online");
+						//	alert("Para solicitar anulaciÃ³n haga click en la pestaÃ±a de Anulacion en Dealer Online");
 						//	}
 						//if (marca=="MM"){
-						//	alert("Para solicitar anulación haga click en la pestaña de Anulacion en Dealer Online");
+						//	alert("Para solicitar anulaciÃ³n haga click en la pestaÃ±a de Anulacion en Dealer Online");
 						//	}
 						//if (marca=="IT"){
-						//	alert("Para solicitar anulación haga click en la pestaña de Anulacion en Dealer Online");
+						//	alert("Para solicitar anulaciÃ³n haga click en la pestaÃ±a de Anulacion en Dealer Online");
 						//	}
 						document.formulario.VINvehiculo.value = ""			
 						document.formulario.Color.value = ""			
@@ -1769,7 +1769,7 @@ function SplitFonos(){
 							selFecha(document.formulario.cboDiaNac,ArrayFechaNac[0])
 							//Mes
 							selFecha(document.formulario.cboMesNac,ArrayFechaNac[1])
-							//Año
+							//AÃ±o
 							selFecha(document.formulario.cboAnhoNac,ArrayFechaNac[2])
 							
 							document.formulario.FechaNacimiento.value = ArrayFechaNac[0] + "/" + ArrayFechaNac[1] + "/" + ArrayFechaNac[2]
@@ -1785,7 +1785,7 @@ function SplitFonos(){
 							selFecha(document.formulario.cboDiaNac,ArrayFechaNac[0])
 							//Mes
 							selFecha(document.formulario.cboMesNac,ArrayFechaNac[1])
-							//Año
+							//AÃ±o
 							selFecha(document.formulario.cboAnhoNac,ArrayFechaNac[2])
 							
 							document.formulario.FechaNacimiento.value = ArrayFechaNac[0] + "/" + ArrayFechaNac[1] + "/" + ArrayFechaNac[2]
@@ -1810,7 +1810,7 @@ function SplitFonos(){
 							selFecha(document.formulario.cboDiaNacUsuario,ArrayFechaNac[0])
 							//Mes
 							selFecha(document.formulario.cboMesNacUsuario,ArrayFechaNac[1])
-							//Año
+							//AÃ±o
 							selFecha(document.formulario.cboAnhoNacUsuario,ArrayFechaNac[2])
 
 							document.formulario.FechaNacimientoUsuario.value = ArrayFechaNac[0] + "/" + ArrayFechaNac[1] + "/" + ArrayFechaNac[2]
@@ -1825,7 +1825,7 @@ function SplitFonos(){
 							selFecha(document.formulario.cboDiaNacUsuario,ArrayFechaNac[0])
 							//Mes
 							selFecha(document.formulario.cboMesNacUsuario,ArrayFechaNac[1])
-							//Año
+							//AÃ±o
 							selFecha(document.formulario.cboAnhoNacUsuario,ArrayFechaNac[2])
 							
 							document.formulario.FechaNacimientoUsuario.value = ArrayFechaNac[0] + "/" + ArrayFechaNac[1] + "/" + ArrayFechaNac[2]
@@ -1851,7 +1851,7 @@ function SplitFonos(){
 							selFecha(document.formulario.cboDiaNacUsuarioEmp,ArrayFechaNac[0])
 							//Mes
 							selFecha(document.formulario.cboMesNacUsuarioEmp,ArrayFechaNac[1])
-							//Año
+							//AÃ±o
 							selFecha(document.formulario.cboAnhoNacUsuarioEmp,ArrayFechaNac[2])
 							
 							document.formulario.FechaNacimientoUsuarioEmp.value = ArrayFechaNac[1] + "/" + ArrayFechaNac[0] + "/" + ArrayFechaNac[2]
@@ -1867,7 +1867,7 @@ function SplitFonos(){
 							selFecha(document.formulario.cboDiaNacUsuarioEmp,ArrayFechaNac[0])
 							//Mes
 							selFecha(document.formulario.cboMesNacUsuarioEmp,ArrayFechaNac[1])
-							//Año
+							//AÃ±o
 							selFecha(document.formulario.cboAnhoNacUsuarioEmp,ArrayFechaNac[2])
 							
 							document.formulario.FechaNacimientoUsuarioEmp.value = ArrayFechaNac[0] + "/" + ArrayFechaNac[1] + "/" + ArrayFechaNac[2]
@@ -1889,7 +1889,7 @@ function SplitFonos(){
 							selFecha(document.formulario.cboDiaFac,ArrayFechaNac[0])
 							//Mes
 							selFecha(document.formulario.cboMesFac,ArrayFechaNac[1])
-							//Año
+							//AÃ±o
 							selFecha(document.formulario.cboAnhoFac,ArrayFechaNac[2])		
 							
 							document.formulario.FechaFactura.value = ArrayFechaNac[0] + "/" + ArrayFechaNac[1] + "/" + ArrayFechaNac[2]
@@ -1912,7 +1912,7 @@ function SplitFonos(){
 							selFecha(document.formulario.cboDiaEnt,ArrayFechaNac[0])
 							//Mes
 							selFecha(document.formulario.cboMesEnt,ArrayFechaNac[1])
-							//Año
+							//AÃ±o
 							selFecha(document.formulario.cboAnhoEnt,ArrayFechaNac[2])	
 							
 							document.formulario.FechaEntrega.value = ArrayFechaNac[0] + "/" + ArrayFechaNac[1] + "/" + ArrayFechaNac[2]
@@ -1962,20 +1962,20 @@ function SplitFonos(){
 					
 					if (accion==1){
 						if(NumChasis=="" && txtNroMotor=="" && txtCampoM==""){
-							alert("Ingrese Nº Vin o Nº Motor para realizar la busqueda.")
+							alert("Ingrese NÂº Vin o NÂº Motor para realizar la busqueda.")
 							return
 						}
 						
 						if(NumChasis!=""){
 							if(NumChasis.length<7){
-									alert("Ingrese mínimo 7 caracteres en campo Nº Vin.")
+									alert("Ingrese mÃ­nimo 7 caracteres en campo NÂº Vin.")
 									return
 							}		
 						}
 
 						if(txtNroMotor!=""){
 							if(txtNroMotor.length<5){
-									alert("Ingrese mínimo 5 caracteres en campo Nº Motor.")
+									alert("Ingrese mÃ­nimo 5 caracteres en campo NÂº Motor.")
 									return
 							}		
 						}
@@ -1990,7 +1990,7 @@ function SplitFonos(){
 							
 						if(txtCampoM!=""){
 							if(txtCampoM.length<5){
-									alert("Ingrese mínimo 5 caracteres en campo M.")
+									alert("Ingrese mÃ­nimo 5 caracteres en campo M.")
 									return
 							}		
 						}							
@@ -2015,7 +2015,7 @@ function SplitFonos(){
 					var txtNroMotor = document.formulario.txtNroMotor.value
 
 					if(NumChasis=="" && txtNroMotor=="" && txtCampoM==""){
-						alert("Ingrese Nº Chasis o Nº Motor para realizar la busqueda.")
+						alert("Ingrese NÂº Chasis o NÂº Motor para realizar la busqueda.")
 						return
 					}
 					Set_Value_Attribute2(NumChasis,txtNroMotor,AttFrom,AttTo,"1","parent.execfuncVehiculo('*x*','*y*','*z*','*w*','*v*','*a*','*b*')")
@@ -2138,7 +2138,7 @@ function SplitFonos(){
 
 					if (document.formulario.txtRut.value.length != 8)
 					{
-						alert("DNI requiere largo de 8 dígitos");
+						alert("DNI requiere largo de 8 dÃ­gitos");
 						document.formulario.txtRut.focus();
 						return;
 					}
@@ -2200,7 +2200,7 @@ function SplitFonos(){
 								
 								if (document.formulario.txtRutUsuario.value.length != 8)
 								{
-									alert("DNI requiere largo de 8 dígitos");
+									alert("DNI requiere largo de 8 dÃ­gitos");
 									document.formulario.txtRutUsuario.focus();
 									return;
 								}
@@ -2400,11 +2400,11 @@ function buscarVendedor(Obj)
 					nom = Obj.value;
 					nom = nom.toLowerCase();
 					document.formulario.lookup_asigna.value ='';				
-					nom = nom.replace("á","a");
-					nom = nom.replace("é","e");
-					nom = nom.replace("í","i");
-					nom = nom.replace("ó","o");
-					nom = nom.replace("ú","u");				
+					nom = nom.replace("Ã¡","a");
+					nom = nom.replace("Ã©","e");
+					nom = nom.replace("Ã­","i");
+					nom = nom.replace("Ã³","o");
+					nom = nom.replace("Ãº","u");				
 					document.formulario.txtNombreVendedor.value =  nom.toUpperCase();
 					if (nom.length >= 5){
 							Mostrar();
@@ -2571,7 +2571,7 @@ body {
 
 <body  topmargin="0" leftmargin="0" onload="javascript:DisabledPropietarioPersona(true);DisabledPropietarioUsuario(false);DisabledEmpresaUsuario(false);DisabledEmpresaCta(true);DisabledDatosConcesionario(false);CargaDatos()">
 <form name="formulario" method="post" action="asp/SaveCupon.asp">
-<!--<a href="javascript:AbrirWin()">Imprimir Cupón</a>-->
+<!--<a href="javascript:AbrirWin()">Imprimir CupÃ³n</a>-->
 <input type="hidden" name="IdCupon" id="IdCupon" value="<%=IdCupon%>">
 <input type="hidden" name="IdVehiculo" id="IdVehiculo" value="<%=IdVehiculo%>">
 <input type="hidden" name="IdPersonaPropietaria" id="IdPersonaPropietaria" value="">
@@ -2590,7 +2590,7 @@ body {
 <input type="hidden" name="ingresomant" id="ingresomant" value="<%=ingresomant%>">
 
 
-<p class="textos_titulo" align="center"><B>CUPÓN DE GARANTÍA</B></p>
+<p class="textos_titulo" align="center"><B>CUPÃ“N DE GARANTÃA</B></p>
 <table width="654" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <td><table width="650" height="66" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="e3e3e3" bgcolor="f3f2f2">
@@ -2860,7 +2860,7 @@ body {
 											<input type="hidden" name="id_type_entity_ComunaPropietario" id="id_type_entity_ComunaPropietario" value="1817045">
 											<!--<input type="text" class="borde1" value="" name="txt_ComunaPropietario" id="txt_ComunaPropietario" size="25" maxlength="25" class="flbs" tabindex="1" onblur="javascript:replicaInfo(this);BuscaComunaXX(this,document.formulario.selectInput)" AUTOCOMPLETE="OFF" >-->
 											<input type="text" class="borde1" value="" name="txt_ComunaPropietario" id="txt_ComunaPropietario" size="25" maxlength="25" class="flbs" tabindex="1" AUTOCOMPLETE="OFF" >
-											<input type="text" name="ComunaPropietario" id="ComunaPropietario" value="">
+											<input type="hidden" name="ComunaPropietario" id="ComunaPropietario" value="">
 
                                             <SELECT id=selectInput NAME=selectInput SIZE=8 STYLE="display:none; position:absolute; top:20px; left:0px"   ONBLUR="this.style.display='none';BuscaComuna(document.formulario.selectInput,document.formulario.txt_ComunaPropietario)"  ONCHANGE="comboselect_onchange(this, this.form.txt_ComunaPropietario);" ONKEYUP="comboselect_onkeyup(event.keyCode, this, this.form.txt_ComunaPropietario)">  
                                             <!--#include file="INC_Comuna.aspx"-->	
@@ -3273,7 +3273,7 @@ body {
                     <input type="hidden" name="hdn_ComunaPropietarioUsuario" id="hdn_ComunaPropietarioUsuario" value="">
                     <input type="hidden" name="hdn_ComunaPropietarioUsuario_nlookup" id="hdn_ComunaPropietarioUsuario_nlookup" value="ComunaPropietarioUsuario">
                     <input type="hidden" name="id_type_entity_ComunaPropietarioUsuario" id="id_type_entity_ComunaPropietarioUsuario" value="1817045">
-                    <input type="text" class="borde1" value="" id="txt_ComunaPropietarioUsuario" name="txt_ComunaPropietarioUsuario" size="25" maxlength="25" class="flbs" tabindex="1" onblur="javascript:BuscaComunaXX(this,document.formulario.selectInput2)"  AUTOCOMPLETE="OFF"> 
+                    <input type="text" class="borde1" value="" id="txt_ComunaPropietarioUsuario" name="txt_ComunaPropietarioUsuario" size="25" maxlength="25" class="flbs" tabindex="1" onblur="javascript:BuscaComunaXX(this,document.formulario.selectInput2)"  AUTOCOMPLETE="OFF">Â 
                     <input type="hidden" id="ComunaPropietarioUsuario" name="ComunaPropietarioUsuario" value="">
 					<SELECT NAME="selectInput2" ID="selectInput2" SIZE=8 STYLE="display:none; position:absolute; top:20px; left:0px"   ONBLUR="this.style.display='none';BuscaComuna(document.formulario.selectInput2,document.formulario.txt_ComunaPropietarioUsuario)"  ONCHANGE="comboselect_onchange(this, this.form.txt_ComunaPropietarioUsuario)" ONKEYUP="comboselect_onkeyup(event.keyCode, this, this.form.txt_ComunaPropietarioUsuario)">  
 					<!--#include file="INC_Comuna.aspx"-->	
@@ -3553,7 +3553,7 @@ body {
         <td height="22" align="left" valign="middle" bgcolor="f1f5f2"><table width="640" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td width="8" valign="middle">&nbsp;</td>
-            <td width="105" valign="middle" class="textos_p">Razón Social</td>
+            <td width="105" valign="middle" class="textos_p">RazÃ³n Social</td>
             <td width="214" valign="middle"><span class="borde21">
                 <input tabindex="302" type="text" class="borde1" name="NombreEmpresa" id="NombreEmpresa" class="borde1" size="35" maxlength="50" value=""  onFocus="fncPonerColor(this);" onBlur="fncQuitarColor(this);trim(this);">
             </span></td>
@@ -3597,7 +3597,7 @@ body {
 											<input type="hidden" name="hdn_Comuna2Empresa" id="hdn_Comuna2Empresa" value="">
 											<input type="hidden" name="hdn_Comuna2Empresa_nlookup" id="hdn_Comuna2Empresa_nlookup" value="Comuna2Empresa">
 											<input type="hidden" name="id_type_entity_Comuna2Empresa" id="id_type_entity_Comuna2Empresa" value="1817045">
-											<input type="text" class="borde1" value="" name="txt_Comuna2Empresa" id="txt_Comuna2Empresa" size="25" maxlength="25" class="flbs" tabindex="1" onblur="javascript:BuscaComunaXX(this,document.formulario.selectInput3)" AUTOCOMPLETE="OFF"> 
+											<input type="text" class="borde1" value="" name="txt_Comuna2Empresa" id="txt_Comuna2Empresa" size="25" maxlength="25" class="flbs" tabindex="1" onblur="javascript:BuscaComunaXX(this,document.formulario.selectInput3)" AUTOCOMPLETE="OFF">Â 
 											<input type="hidden" name="Comuna2Empresa" id="Comuna2Empresa" value="">
 
 								        <SELECT id=selectInput3 NAME=selectInput3 SIZE=8 STYLE="display:none; position:absolute; top:20px; left:0px"   ONBLUR="this.style.display='none';BuscaComuna(document.formulario.selectInput3,document.formulario.txt_Comuna2Empresa)"  ONCHANGE="comboselect_onchange(this, this.form.txt_Comuna2Empresa);" ONKEYUP="comboselect_onkeyup(event.keyCode, this, this.form.txt_Comuna2Empresa)">  
@@ -3801,7 +3801,7 @@ body {
                     <input type="hidden" name="hdn_ComunaPropietarioUsuarioEmp" id="hdn_ComunaPropietarioUsuarioEmp" value="">
                     <input type="hidden" name="hdn_ComunaPropietarioUsuarioEmp_nlookup" id="hdn_ComunaPropietarioUsuarioEmp_nlookup" value="ComunaPropietarioUsuarioEmp">
                     <input type="hidden" name="id_type_entity_ComunaPropietarioUsuarioEmp" id="id_type_entity_ComunaPropietarioUsuarioEmp" value="1817045">
-                    <input type="text" class="borde1" value="" name="txt_ComunaPropietarioUsuarioEmp" id="txt_ComunaPropietarioUsuarioEmp" size="25" maxlength="25" class="flbs" tabindex="1" onblur="javascript:BuscaComunaXX(this,document.formulario.selectInput4)" AUTOCOMPLETE="OFF" > 
+                    <input type="text" class="borde1" value="" name="txt_ComunaPropietarioUsuarioEmp" id="txt_ComunaPropietarioUsuarioEmp" size="25" maxlength="25" class="flbs" tabindex="1" onblur="javascript:BuscaComunaXX(this,document.formulario.selectInput4)" AUTOCOMPLETE="OFF" >Â 
                     <input type="hidden" name="ComunaPropietarioUsuarioEmp" id="ComunaPropietarioUsuarioEmp" value="">
 											                    
 					<SELECT NAME=selectInput2 SIZE=8 STYLE="display:none; position:absolute; top:20px; left:0px"   ONBLUR="this.style.display='none';BuscaComuna(document.formulario.selectInput2,document.formulario.txt_ComunaPropietarioUsuario)"  ONCHANGE="comboselect_onchange(this, this.form.txt_ComunaPropietarioUsuario)" ONKEYUP="comboselect_onkeyup(event.keyCode, this, this.form.txt_ComunaPropietarioUsuario)">  
@@ -4118,10 +4118,10 @@ body {
 					            <%else%>
 						            <option value="CHEQUE">CHEQUE</option>
 					            <%end if%>
-					            <%if trim(FormaPagoUsuario)="CRÉDITO" then%>
-						            <option value="CRÉDITO" selected>CRÉDITO</option>
+					            <%if trim(FormaPagoUsuario)="CRÃ‰DITO" then%>
+						            <option value="CRÃ‰DITO" selected>CRÃ‰DITO</option>
 					            <%else%>
-						            <option value="CRÉDITO">CRÉDITO</option>
+						            <option value="CRÃ‰DITO">CRÃ‰DITO</option>
 					            <%end if%>													
 
 					            <%if trim(FormaPagoUsuario)="LEASING" then%>
@@ -4159,10 +4159,10 @@ body {
 					            <%else%>
 						            <option value="CHEQUE">CHEQUE</option>
 					            <%end if%>
-					            <%if trim(FormaPagoUsuario2)="CRÉDITO" then%>
-						            <option value="CRÉDITO" selected>CRÉDITO</option>
+					            <%if trim(FormaPagoUsuario2)="CRÃ‰DITO" then%>
+						            <option value="CRÃ‰DITO" selected>CRÃ‰DITO</option>
 					            <%else%>
-						            <option value="CRÉDITO">CRÉDITO</option>
+						            <option value="CRÃ‰DITO">CRÃ‰DITO</option>
 					            <%end if%>													
 
 					            <%if trim(FormaPagoUsuario2)="LEASING" then%>
@@ -4239,7 +4239,7 @@ body {
 <script>
 
 function validaSoloTexto(obj){
-  var patron = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]*$/;
+  var patron = /^[a-zA-ZÃ±Ã‘Ã¡Ã©Ã­Ã³ÃºÃÃ‰ÃÃ“Ãš ]*$/;
   var cadena = obj.value;
   var Nuevacadena = "";
    var caracter =""
@@ -5385,7 +5385,7 @@ var matchArray=emailStr.match(emailPat)
 	
 	if (matchArray==null) {
 		
-		alert("Dirección Email está incorrecta. Verifique que este bien escrita.")
+		alert("DirecciÃ³n Email estÃ¡ incorrecta. Verifique que este bien escrita.")
 		obj.value='';
 		obj.focus();
 		return false;
@@ -5404,7 +5404,7 @@ var matchArray=emailStr.match(emailPat)
 	if (IPArray!=null) {
 		  for (var i=1;i<=4;i++) {
 		    if (IPArray[i]>255) {
-		        alert("Dirección IP no Valida!")
+		        alert("DirecciÃ³n IP no Valida!")
 		        obj.value='';
 		        obj.focus();
 			return false;
@@ -5425,13 +5425,13 @@ var matchArray=emailStr.match(emailPat)
 	if (domArr[domArr.length-1].length<2 || 
 	    domArr[domArr.length-1].length>3) {
 	
-	   alert("La dirección debe finalizar con 3 letras (ej: com, net, org, gov, mil) o 2 letras (ej: cl, de, br, ar)")
+	   alert("La direcciÃ³n debe finalizar con 3 letras (ej: com, net, org, gov, mil) o 2 letras (ej: cl, de, br, ar)")
 	   obj.value = '';
 	   obj.focus();
 	   return false
 	}
 	if (len<2) {
-	   var errStr="Dirección incompleta"
+	   var errStr="DirecciÃ³n incompleta"
 	   alert(errStr)
 	   obj.value = '';
 	   obj.focus();
@@ -5506,13 +5506,13 @@ function combotext_onkeydown(e,oText,oSelect){
         if(i < oSelect.options.length-1){                                                
            lookAheadOptionText = oSelect.options[i+1].text.toUpperCase() ;               
                                                                                          
-           if(toFind.search('Ñ')==-1){                                                   
-								toFind = toFind.replace('Ñ','N')                                                 
-								nextOptionText = nextOptionText.replace('Ñ','N')                                 
-								lookAheadOptionText = lookAheadOptionText.replace('Ñ','N')                       
-								toFind = toFind.replace('Ñ','N')                                                 
-								nextOptionText = nextOptionText.replace('Ñ','N')                                 
-								lookAheadOptionText = lookAheadOptionText.replace('Ñ','N')                       
+           if(toFind.search('Ã‘')==-1){                                                   
+								toFind = toFind.replace('Ã‘','N')                                                 
+								nextOptionText = nextOptionText.replace('Ã‘','N')                                 
+								lookAheadOptionText = lookAheadOptionText.replace('Ã‘','N')                       
+								toFind = toFind.replace('Ã‘','N')                                                 
+								nextOptionText = nextOptionText.replace('Ã‘','N')                                 
+								lookAheadOptionText = lookAheadOptionText.replace('Ã‘','N')                       
            }                                                                             
                        
          if( (lookAheadOptionText.search(toFind)!=-1)){ 
@@ -5661,7 +5661,7 @@ function validaFechaFacEntrega(){
 		retorno = validarRangoFecha(objDiaFF.value,objMesFF.value,objAgnoFF.value,objDiaFE.value,objMesFE.value,objAgnoFE.value)
 		
 //		if(retorno==-1){
-//			alert("Fecha Facturación menor a 1 mes")
+//			alert("Fecha FacturaciÃ³n menor a 1 mes")
 //			objDiaFF.value=""
 //			objMesFF.value=""
 //			objAgnoFF.value=""
@@ -5670,7 +5670,7 @@ function validaFechaFacEntrega(){
 //		}
 //
 //		if(retorno==1){
-//			alert("Fecha Facturación mayor a 1 mes")
+//			alert("Fecha FacturaciÃ³n mayor a 1 mes")
 //			objDiaFF.value=""
 //			objMesFF.value=""
 //			objAgnoFF.value=""
