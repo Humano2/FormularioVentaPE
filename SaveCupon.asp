@@ -288,16 +288,16 @@ if trim(IdTab)="3" then 'Para Leasing Banco
 end if		
 
 
-'/////////Actualiza Veh韈ulo
+'/////////Actualiza Veh铆culo
 call UpdateVehiculo(IdVehiculo)
-'/////////Actualiza Veh韈ulo
+'/////////Actualiza Veh铆culo
 
 
-'/////////Se crea el Cup髇/////////
+'/////////Se crea el Cup贸n/////////
 if trim(IdCupon)="" then
 	CreateCupon()
 end if
-'/////////Se crea el Cup髇/////////
+'/////////Se crea el Cup贸n/////////
 
 if trim(IdTab)="1" then
 	UpdateUsuarioPersonaCupon(IdCupon)
@@ -329,7 +329,7 @@ dim retarr
 IdDomainh2 = "5920740"
 TypeEntity = 1817934
 'if trim(IdCupon)="1" then
-		'Calcula Atributos Aut髆aticos
+		'Calcula Atributos Aut贸maticos
 '		retarr = h2res.attribute_automatico(IdCupon, IdDomainh2, TypeEntity, "creacion", ,True)
 '		if isarray(retarr) then 
 '			if retarr(0,0) <> "-1" and retarr(0,0) <> "" then 
@@ -497,6 +497,32 @@ valor = ""
 	end if
 	set Rs_ent = Nothing	
 	GetNumDocumento = valor
+end function 
+
+function GetDistritotxt(ComunaPropietario)
+dim strSelectedFields
+dim strTempTable
+dim strFilter
+dim str_orderby
+dim Rs_ent
+dim valor
+valor = ""
+
+	strSelectedFields = " m1.distrito "
+	strTempTable = " entity e inner join module_5920740_9469 m1 on e.id_entity=m1.id_entity "
+	strFilter = " type_entity>0 and m1.id_entity = '" & ComunaPropietario & "'"
+	str_orderby = ""
+	set Rs_ent = salesh2.execute_Commandquery("select", strSelectedFields, strTempTable, strFilter, , str_orderby)
+	if not(Rs_ent is nothing) then
+	 If Rs_ent.state = 1 Then
+	  If Not Rs_ent.EOF Then
+	  	 valor = Rs_ent("distrito")
+	  end if
+	 end if
+	end if
+	Rs_ent.Close
+	set Rs_ent = Nothing	
+	GetDistritotxt = valor
 end function 
 
 function GetMresumen(ModeloResumen)
@@ -710,7 +736,7 @@ sub CreateCupon()
 				End If
 							
 				'Comuna2 - ComunaPropietario
-				if trim(request("txt_ComunaPropietario"))<>"" then Call h2res.attribute_answer(1,108576,IdCupon,Iddom,request("txt_ComunaPropietario"))
+				if trim(request("txt_ComunaPropietario"))<>"" then Call h2res.attribute_answer(1,108576,IdCupon,Iddom,GetDistritotxt(ComunaPropietario))
 				'RegionPropietario
 				if trim(RegionPropietario)<>"" then Call h2res.attribute_answer(1,108578,IdCupon,Iddom,RegionPropietario)				
 				
@@ -736,7 +762,7 @@ sub CreateCupon()
 				'Dpto e
 				if trim(OficinaEmpresa)<>"" then Call h2res.attribute_answer(1,108612,IdCupon,Iddom,OficinaEmpresa)
 				'Comuna e
-				if trim(request("txt_Comuna2Empresa"))<>"" then Call h2res.attribute_answer(1,108576,IdCupon,Iddom,request("txt_Comuna2Empresa"))
+				if trim(request("txt_Comuna2Empresa"))<>"" then Call h2res.attribute_answer(1,108576,IdCupon,Iddom,GetDistritotxt(ComunaPropietario))
 				'region e
 				if trim(RegionEmpresa)<>"" then Call h2res.attribute_answer(1,108578,IdCupon,Iddom,RegionEmpresa)
 				'Telefono Empresa
@@ -1446,7 +1472,7 @@ h2_dbclose() 'final
 <head>
 <LINK REL="SHORTCUT ICON" HREF="../images/logoSk.ico">
 <title>   
-Cupones Garant韆 Fiat
+Cupones Garant铆a Fiat
 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="http://administracioncupones.ska.cl/css/IT_app.css" rel="stylesheet" type="text/css">
@@ -1568,7 +1594,7 @@ setTimeout('deshabilitalayertapa()', 15000);
 	<tr>
 	    <td align=center class="texto1">
 			Informacion ingresada exitosamente (<%=NumDocGen%>)<br><br>
-			<br><br><a href="javascript:AbrirWin('<%=IdCupon%>')">Imprimir Cup髇</a>
+			<br><br><a href="javascript:AbrirWin('<%=IdCupon%>')">Imprimir Cup贸n</a>
 			<!--<br><br><br><a href="../../FormsSK/CuponesSK/evento.asp?IdCupon=<%=IdCupon%>&RUTCUpon=<%=rutconcesionario%>">Volver y Editar</a>-->
 		</td>
 	</tr>
